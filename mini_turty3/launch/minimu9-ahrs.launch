@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- JJ - sends the 'map to odom' tf, based on imu ahrs -->
+  <node pkg="minimu9-ahrs" type="minimu9-ahrs-ros" name="minimu9" />
+
+  <!-- JJ - sends the 'odom to base_footprint' tf -->
+  <node pkg="tf" type="static_transform_publisher" name="base_footprint_broadcaster" args="0 0 0 0 0 0 odom base_footprint 10" />
+  
+  <!-- JJ - added robot model -->
+  <arg name="model" />
+  <arg name="gui" default="False" />
+  <!--  <param name="robot_description" textfile="$(arg model)" />-->
+  <param name="robot_description" textfile="$(find mini_turty3)/launch/test.urdf" />
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" ></node>
+
+</launch>
+  
+  
