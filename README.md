@@ -2,9 +2,7 @@
 
 ROS package for the Mini-Turty robot.
 
-Rhoeby Dynamics website for the Mini-Turty robot: 
-
-    https://www.rhoeby.com/product/mini-turty
+Website: https://www.rhoeby.com/product/mini-turty
     
 The Mini-Turty Robot from Rhoeby Dynamics represents a new level of value and functionality in a ROS navigation-capable robot. Designed with the lowest cost and complete user serviceability in mind, this robot is providing greatly improved access to advanced robotics navigation and much more!
 
